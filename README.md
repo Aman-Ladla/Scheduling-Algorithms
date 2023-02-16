@@ -13,7 +13,7 @@ This application provides the functionality to view and visualize the execution 
 
 ### `Tech-stack`
 
-It used Java as language for Native Android development and animation.
+It uses Java as language for Native Android development and animation.
 
 ### `SnapShot`
 
