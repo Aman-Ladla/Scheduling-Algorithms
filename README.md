@@ -17,4 +17,4 @@ It used Java as language for Native Android development and animation.
 
 ### `SnapShot`
 
-![SnapShot](https://github.com/Aman-Ladla/Scheduling-Algorithms/blob/master/Scheduling.png?raw=true)
+![SnapShot](https://github.com/Aman-Ladla/Scheduling-Algorithms/blob/main/Scheduling.png?raw=true)
