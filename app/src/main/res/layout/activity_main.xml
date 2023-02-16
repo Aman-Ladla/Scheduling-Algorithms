@@ -1,0 +1,784 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient"
+    tools:context=".MainActivity">
+
+
+    <ScrollView
+        android:layout_width="380dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="84dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="40dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.gridlayout.widget.GridLayout
+            android:layout_width="350dp"
+            android:layout_height="729dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="15dp"
+            app:columnCount="2"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:rowCount="4">
+
+            <!--<ImageView
+                android:id="@+id/imageView5"
+                android:layout_width="175dp"
+                android:layout_height="100dp"
+                android:padding="10dp"
+                app:srcCompat="@drawable/FCFS" />-->
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="165dp"
+                android:layout_height="100dp"
+                android:background="@drawable/shape"
+                android:fontFamily="@font/brushstr"
+                android:onClick="fcfs"
+                android:padding="10dp"
+                android:text="FCFS"
+                android:textAlignment="center"
+                android:textColor="#000000"
+                android:textSize="50dp" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="165dp"
+                android:layout_height="100dp"
+                android:layout_marginLeft="20dp"
+                android:background="@drawable/shape"
+                android:fontFamily="@font/brushstr"
+                android:onClick="sjf"
+                android:padding="10dp"
+                android:text="SJF"
+                android:textAlignment="center"
+                android:textColor="#000000"
+                android:textSize="50dp"
+                tools:ignore="RtlSymmetry" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="165dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/shape"
+                android:fontFamily="@font/brushstr"
+                android:onClick="rr"
+                android:padding="10dp"
+                android:text="Round\n robin"
+                android:textAlignment="center"
+                android:textColor="#000000"
+                android:textSize="26dp" />
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="165dp"
+                android:layout_height="100dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/shape"
+                android:fontFamily="@font/brushstr"
+                android:onClick="ps"
+                android:padding="10dp"
+                android:text="Priority\nScheduling"
+                android:textAlignment="center"
+                android:textColor="#000000"
+                android:textSize="26dp" />
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="165dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/shape"
+                android:fontFamily="@font/brushstr"
+                android:onClick="ljf"
+                android:padding="10dp"
+                android:text="LJF"
+                android:textAlignment="center"
+                android:textColor="#000000"
+                android:textSize="50dp" />
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="165dp"
+                android:layout_height="100dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/shape"
+                android:fontFamily="@font/brushstr"
+                android:onClick="srtf"
+                android:padding="10dp"
+                android:paddingTop="10dp"
+                android:text="SRTF"
+                android:textAlignment="center"
+                android:textColor="#000000"
+                android:textSize="50dp"
+                tools:ignore="RtlSymmetry" />
+
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="165dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="-10dp"
+                android:background="@drawable/shape"
+                android:fontFamily="@font/brushstr"
+                android:onClick="pps"
+                android:padding="10dp"
+                android:text="Preemptive\nPriority Sch."
+                android:textAlignment="center"
+                android:textColor="#000000"
+                android:textSize="23dp" />
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="165dp"
+                android:layout_height="100dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/shape"
+                android:fontFamily="@font/brushstr"
+                android:gravity="center_horizontal"
+                android:onClick="lrtf"
+                android:padding="10dp"
+                android:text="LRTF"
+                android:textAlignment="gravity"
+                android:textColor="#000000"
+                android:textSize="50dp" />
+
+            <!-- <TextView
+                android:id="@+id/textView8"
+                android:layout_width="165dp"
+                android:layout_height="100dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:background="#1C88EC"
+                android:textAlignment="center"
+                android:fontFamily="@font/brushstr"
+                android:padding="10dp"
+                android:paddingTop="10dp"
+                android:text="LRTF"
+                android:textColor="#000000"
+                android:textSize="50dp"
+                tools:ignore="RtlSymmetry" />-->
+
+
+        </androidx.gridlayout.widget.GridLayout>
+
+
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/textView0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="34dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="284dp"
+        android:layout_marginBottom="28dp"
+        android:text="Algorithm:"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Switch
+        android:id="@+id/switch1"
+        android:layout_width="wrap_content"
+        android:layout_height="27dp"
+        android:layout_marginStart="181dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="36dp"
+        android:text="IO  "
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+<!--
+<androidx.gridlayout.widget.GridLayout
+android:id="@+id/gridLayout"
+android:layout_width="0dp"
+android:layout_height="0dp"
+android:layout_marginStart="15dp"
+android:layout_marginTop="10dp"
+android:layout_marginEnd="15dp"
+android:layout_marginBottom="80dp"
+app:columnCount="4"
+app:layout_constraintBottom_toBottomOf="parent"
+app:layout_constraintEnd_toEndOf="parent"
+app:layout_constraintHorizontal_bias="0.0"
+app:layout_constraintStart_toStartOf="parent"
+app:layout_constraintTop_toBottomOf="@+id/radioGroup2"
+app:layout_constraintVertical_bias="0.0"
+app:rowCount="8">
+
+
+<TextView
+    android:id="@+id/textView1"
+    android:gravity="center"
+    android:text="Process"
+    android:textAlignment="gravity"
+    android:textSize="20sp"
+    android:textStyle="bold"
+    app:layout_columnWeight="1"
+    app:layout_rowWeight="1" />
+
+<TextView
+    android:id="@+id/textView0"
+    android:gravity="center"
+    android:textAlignment="gravity"
+    android:textSize="20sp"
+    android:textStyle="bold"
+    app:layout_columnWeight="1"
+    app:layout_rowWeight="1" />
+
+<EditText
+    android:id="@+id/editText0"
+    android:gravity="center"
+    android:inputType="number"
+    android:textAlignment="gravity"
+    app:layout_columnWeight="1"
+    app:layout_rowWeight="1" />
+
+<TextView
+    android:id="@+id/textView2"
+    android:layout_width="84dp"
+    android:gravity="center"
+    android:text="Arrival\nTime"
+    android:textAlignment="gravity"
+    android:textSize="20sp"
+    android:textStyle="bold"
+    app:layout_column="1"
+    app:layout_columnWeight="1"
+    app:layout_row="0"
+    app:layout_rowWeight="1" />
+
+<TextView
+    android:id="@+id/textView3"
+    android:layout_width="wrap_content"
+    android:gravity="center"
+    android:text="Execute\nTime"
+    android:textAlignment="gravity"
+    android:textSize="20sp"
+    android:textStyle="bold"
+    app:layout_column="2"
+    app:layout_columnWeight="1"
+    app:layout_row="0"
+    app:layout_rowWeight="1" />
+
+<TextView
+    android:id="@+id/textView4"
+    android:layout_width="87dp"
+    android:gravity="center"
+    android:text="Service\nTime"
+    android:textAlignment="gravity"
+    android:textSize="20sp"
+    android:textStyle="bold"
+    app:layout_columnWeight="1"
+    app:layout_rowWeight="1" />
+
+<TextView
+    android:id="@+id/textView6"
+    android:gravity="center"
+    android:text="P0"
+    android:textAlignment="gravity"
+    android:textSize="20sp"
+    android:textStyle="bold"
+    app:layout_columnWeight="1"
+    app:layout_rowWeight="1" />
+
+<EditText
+    android:id="@+id/editText22"
+    android:gravity="center"
+    android:inputType="number"
+    android:textAlignment="gravity"
+    app:layout_columnWeight="1"
+    app:layout_rowWeight="1" />
+
+
+<EditText
+    android:id="@+id/editText23"
+    android:layout_width="83dp"
+    android:gravity="center"
+    android:inputType="number|text"
+    android:textAlignment="gravity"
+    app:layout_columnWeight="1"
+    app:layout_rowWeight="1" />
+
+<EditText
+    android:id="@+id/editText24"
+    android:layout_width="83dp"
+    android:gravity="center"
+    android:inputType="number"
+    android:textAlignment="gravity"
+    app:layout_columnWeight="1"
+    app:layout_rowWeight="1" />
+
+<TextView
+    android:id="@+id/textView31"
+    android:gravity="center"
+    android:text="P1"
+    android:textAlignment="gravity"
+    android:textSize="20sp"
+    android:textStyle="bold"
+    android:visibility="gone"
+    app:layout_columnWeight="1"
+    app:layout_rowWeight="1"
+    tools:visibility="gone" />
+
+<EditText
+    android:id="@+id/editText32"
+    android:layout_width="83dp"
+    android:gravity="center"
+    android:inputType="number|text"
+    android:textAlignment="gravity"
+    android:visibility="gone"
+    app:layout_columnWeight="1"
+    app:layout_rowWeight="1"
+    tools:visibility="gone" />
+
+<EditText
+    android:id="@+id/editText33"
+    android:layout_width="83dp"
+    android:gravity="center"
+    android:inputType="number|text"
+    android:textAlignment="gravity"
+    android:visibility="gone"
+    app:layout_columnWeight="1"
+    app:layout_rowWeight="1"
+    tools:visibility="gone" />
+
+<EditText
+    android:id="@+id/editText34"
+    android:layout_width="83dp"
+    android:gravity="center"
+    android:inputType="number|text"
+    android:textAlignment="gravity"
+    android:visibility="gone"
+    app:layout_columnWeight="1"
+    app:layout_rowWeight="1"
+    tools:visibility="gone" />
+
+<TextView
+    android:id="@+id/textView41"
+    android:gravity="center"
+    android:text="P2"
+    android:textAlignment="gravity"
+    android:textSize="20sp"
+    android:textStyle="bold"
+    android:visibility="gone"
+    app:layout_columnWeight="1"
+    app:layout_rowWeight="1"
+    tools:visibility="gone" />
+
+<EditText
+    android:id="@+id/editText42"
+    android:layout_width="83dp"
+    android:gravity="center"
+    android:inputType="number|text"
+    android:textAlignment="gravity"
+    android:visibility="gone"
+    app:layout_columnWeight="1"
+    app:layout_rowWeight="1"
+    tools:visibility="gone" />
+
+<EditText
+    android:id="@+id/editText43"
+    android:layout_width="83dp"
+    android:gravity="center"
+    android:inputType="number|text"
+    android:textAlignment="gravity"
+    android:visibility="gone"
+    app:layout_columnWeight="1"
+    app:layout_rowWeight="1"
+    tools:visibility="gone" />
+
+<EditText
+    android:id="@+id/editText44"
+    android:layout_width="83dp"
+    android:gravity="center"
+    android:inputType="number|text"
+    android:textAlignment="gravity"
+    android:visibility="gone"
+    app:layout_columnWeight="1"
+    app:layout_rowWeight="1"
+    tools:visibility="gone" />
+
+<TextView
+    android:id="@+id/textView51"
+    android:gravity="center"
+    android:text="P3"
+    android:textAlignment="gravity"
+    android:textSize="20sp"
+    android:textStyle="bold"
+    android:visibility="gone"
+    app:layout_columnWeight="1"
+    app:layout_rowWeight="1"
+    tools:visibility="gone" />
+
+<EditText
+    android:id="@+id/editText52"
+    android:layout_width="83dp"
+    android:gravity="center"
+    android:inputType="number|text"
+    android:textAlignment="gravity"
+    android:visibility="gone"
+    app:layout_columnWeight="1"
+    app:layout_rowWeight="1"
+    tools:visibility="gone" />
+
+<EditText
+    android:id="@+id/editText53"
+    android:layout_width="83dp"
+    android:gravity="center"
+    android:inputType="number|text"
+    android:textAlignment="gravity"
+    android:visibility="gone"
+    app:layout_columnWeight="1"
+    app:layout_rowWeight="1"
+    tools:visibility="gone" />
+
+<EditText
+    android:id="@+id/editText54"
+    android:layout_width="83dp"
+    android:gravity="center"
+    android:inputType="number|text"
+    android:textAlignment="gravity"
+    android:visibility="gone"
+    app:layout_columnWeight="1"
+    app:layout_rowWeight="1"
+    tools:visibility="gone" />
+
+<TextView
+    android:id="@+id/textView61"
+    android:gravity="center"
+    android:text="P4"
+    android:textAlignment="gravity"
+    android:textSize="20sp"
+    android:textStyle="bold"
+    android:visibility="gone"
+    app:layout_columnWeight="1"
+    app:layout_rowWeight="1"
+    tools:visibility="gone" />
+
+<EditText
+    android:id="@+id/editText62"
+    android:layout_width="83dp"
+    android:gravity="center"
+    android:inputType="number|text"
+    android:textAlignment="gravity"
+    android:visibility="gone"
+    app:layout_columnWeight="1"
+    app:layout_rowWeight="1"
+    tools:visibility="gone" />
+
+<EditText
+    android:id="@+id/editText63"
+    android:layout_width="83dp"
+    android:gravity="center"
+    android:inputType="number|text"
+    android:textAlignment="gravity"
+    android:visibility="gone"
+    app:layout_columnWeight="1"
+    app:layout_rowWeight="1"
+    tools:visibility="gone" />
+
+<EditText
+    android:id="@+id/editText64"
+    android:layout_width="83dp"
+    android:gravity="center"
+    android:inputType="number|text"
+    android:textAlignment="gravity"
+    android:visibility="gone"
+    app:layout_columnWeight="1"
+    app:layout_rowWeight="1"
+    tools:visibility="gone" />
+
+<TextView
+    android:id="@+id/textView71"
+    android:gravity="center"
+    android:text="P5"
+    android:textAlignment="gravity"
+    android:textSize="20sp"
+    android:textStyle="bold"
+    android:visibility="gone"
+    app:layout_columnWeight="1"
+    app:layout_rowWeight="1"
+    tools:visibility="gone" />
+
+<EditText
+    android:id="@+id/editText72"
+    android:layout_width="83dp"
+    android:gravity="center"
+    android:inputType="number|text"
+    android:textAlignment="gravity"
+    android:visibility="gone"
+    app:layout_columnWeight="1"
+    app:layout_rowWeight="1"
+    tools:visibility="gone" />
+
+<EditText
+    android:id="@+id/editText73"
+    android:layout_width="83dp"
+    android:gravity="center"
+    android:inputType="number|text"
+    android:textAlignment="gravity"
+    android:visibility="gone"
+    app:layout_columnWeight="1"
+    app:layout_rowWeight="1"
+    tools:visibility="gone" />
+
+<EditText
+    android:id="@+id/editText74"
+    android:layout_width="83dp"
+    android:gravity="center"
+    android:inputType="number|text"
+    android:textAlignment="gravity"
+    android:visibility="gone"
+    app:layout_columnWeight="1"
+    app:layout_rowWeight="1"
+    tools:visibility="gone" />
+
+<TextView
+    android:id="@+id/textView81"
+    android:gravity="center"
+    android:text="P6"
+    android:textAlignment="gravity"
+    android:textSize="20sp"
+    android:textStyle="bold"
+    android:visibility="gone"
+    app:layout_columnWeight="1"
+    app:layout_rowWeight="1"
+    tools:visibility="gone" />
+
+<EditText
+    android:id="@+id/editText82"
+    android:layout_width="83dp"
+    android:gravity="center"
+    android:inputType="number|text"
+    android:textAlignment="gravity"
+    android:visibility="gone"
+    app:layout_columnWeight="1"
+    app:layout_rowWeight="1"
+    tools:visibility="gone" />
+
+<EditText
+    android:id="@+id/editText83"
+    android:layout_width="83dp"
+    android:gravity="center"
+    android:inputType="number|text"
+    android:textAlignment="gravity"
+    android:visibility="gone"
+    app:layout_columnWeight="1"
+    app:layout_rowWeight="1"
+    tools:visibility="gone" />
+
+<EditText
+    android:id="@+id/editText84"
+    android:layout_width="83dp"
+    android:gravity="center"
+    android:inputType="number|text"
+    android:textAlignment="gravity"
+    android:visibility="gone"
+    app:layout_columnWeight="1"
+    app:layout_rowWeight="1"
+    tools:visibility="gone" />
+
+<TextView
+    android:id="@+id/textView91"
+    android:gravity="center"
+    android:text="P7"
+    android:textAlignment="gravity"
+    android:textSize="20sp"
+    android:textStyle="bold"
+    android:visibility="gone"
+    app:layout_columnWeight="1"
+    app:layout_rowWeight="1"
+    tools:visibility="gone" />
+
+<EditText
+    android:id="@+id/editText92"
+    android:layout_width="83dp"
+    android:gravity="center"
+    android:inputType="number|text"
+    android:textAlignment="gravity"
+    android:visibility="gone"
+    app:layout_columnWeight="1"
+    app:layout_rowWeight="1"
+    tools:visibility="gone" />
+
+<EditText
+    android:id="@+id/editText93"
+    android:layout_width="83dp"
+    android:gravity="center"
+    android:inputType="number|text"
+    android:textAlignment="gravity"
+    android:visibility="gone"
+    app:layout_columnWeight="1"
+    app:layout_rowWeight="1"
+    tools:visibility="gone" />
+
+<EditText
+    android:id="@+id/editText94"
+    android:layout_width="83dp"
+    android:gravity="center"
+    android:inputType="number|text"
+    android:textAlignment="gravity"
+    android:visibility="gone"
+    app:layout_columnWeight="1"
+    app:layout_rowWeight="1"
+    tools:visibility="gone" />
+
+<TextView
+    android:id="@+id/textView101"
+    android:gravity="center"
+    android:text="P8"
+    android:textAlignment="gravity"
+    android:textSize="20sp"
+    android:textStyle="bold"
+    android:visibility="gone"
+    app:layout_columnWeight="1"
+    app:layout_rowWeight="1"
+    tools:visibility="gone" />
+
+<EditText
+    android:id="@+id/editText102"
+    android:layout_width="83dp"
+    android:gravity="center"
+    android:inputType="number|text"
+    android:textAlignment="gravity"
+    android:visibility="gone"
+    app:layout_columnWeight="1"
+    app:layout_rowWeight="1"
+    tools:visibility="gone" />
+
+<EditText
+    android:id="@+id/editText103"
+    android:layout_width="83dp"
+    android:gravity="center"
+    android:inputType="number|text"
+    android:textAlignment="gravity"
+    android:visibility="gone"
+    app:layout_columnWeight="1"
+    app:layout_rowWeight="1"
+    tools:visibility="gone" />
+
+<EditText
+    android:id="@+id/editText104"
+    android:layout_width="83dp"
+    android:gravity="center"
+    android:inputType="number|text"
+    android:textAlignment="gravity"
+    android:visibility="gone"
+    app:layout_columnWeight="1"
+    app:layout_rowWeight="1"
+    tools:visibility="gone" />
+
+<TextView
+    android:id="@+id/textView111"
+    android:gravity="center"
+    android:text="P9"
+    android:textAlignment="gravity"
+    android:textSize="20sp"
+    android:textStyle="bold"
+    android:visibility="gone"
+    app:layout_columnWeight="1"
+    app:layout_rowWeight="1"
+    tools:visibility="gone" />
+
+<EditText
+    android:id="@+id/editText112"
+    android:layout_width="83dp"
+    android:gravity="center"
+    android:inputType="number|text"
+    android:textAlignment="gravity"
+    android:visibility="gone"
+    app:layout_columnWeight="1"
+    app:layout_rowWeight="1"
+    tools:visibility="gone" />
+
+<EditText
+    android:id="@+id/editText113"
+    android:layout_width="83dp"
+    android:gravity="center"
+    android:inputType="number|text"
+    android:textAlignment="gravity"
+    android:visibility="gone"
+    app:layout_columnWeight="1"
+    app:layout_rowWeight="1"
+    tools:visibility="gone" />
+
+<EditText
+    android:id="@+id/editText114"
+    android:layout_width="83dp"
+    android:gravity="center"
+    android:inputType="number|text"
+    android:textAlignment="gravity"
+    android:visibility="gone"
+    app:layout_columnWeight="1"
+    app:layout_rowWeight="1"
+    tools:visibility="gone" />
+
+<TextView
+    android:id="@+id/textView121"
+    android:gravity="center"
+    android:text="P1"
+    android:textAlignment="gravity"
+    android:textSize="20sp"
+    android:textStyle="bold"
+    android:visibility="gone"
+    app:layout_columnWeight="1"
+    app:layout_rowWeight="1"
+    tools:visibility="gone" />
+
+<EditText
+    android:id="@+id/editText122"
+    android:layout_width="83dp"
+    android:gravity="center"
+    android:inputType="number|text"
+    android:textAlignment="gravity"
+    android:visibility="gone"
+    app:layout_columnWeight="1"
+    app:layout_rowWeight="1"
+    tools:visibility="gone" />
+
+<EditText
+    android:id="@+id/editText123"
+    android:layout_width="83dp"
+    android:gravity="center"
+    android:inputType="number|text"
+    android:textAlignment="gravity"
+    android:visibility="gone"
+    app:layout_columnWeight="1"
+    app:layout_rowWeight="1"
+    tools:visibility="gone" />
+
+<EditText
+    android:id="@+id/editText124"
+    android:layout_width="83dp"
+    android:gravity="center"
+    android:inputType="number|text"
+    android:textAlignment="gravity"
+    android:visibility="gone"
+    app:layout_columnWeight="1"
+    app:layout_rowWeight="1"
+    tools:visibility="gone" />
+
+</androidx.gridlayout.widget.GridLayout>-->

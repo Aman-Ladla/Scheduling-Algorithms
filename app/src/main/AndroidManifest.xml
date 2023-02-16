@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.studies.os">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/n5"
+        android:label="Algoholic"
+        android:roundIcon="@drawable/n5"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".Tabbed"
+            android:label="@string/title_activity_tabbed"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity android:name=".I_PPriority" />
+        <activity android:name=".I_LRTF" />
+        <activity android:name=".I_SRTF" />
+        <activity android:name=".I_LJF" />
+        <activity android:name=".I_Priority" />
+        <activity android:name=".I_RR" />
+        <activity android:name=".I_SJF" />
+        <activity android:name=".I_FCFS" />
+        <activity android:name=".LRTF" />
+        <activity android:name=".PPriority" />
+        <activity android:name=".SRTF" />
+        <activity android:name=".LJF" />
+        <activity android:name=".Priority" />
+        <activity android:name=".RR" />
+        <activity android:name=".SJF" />
+        <activity android:name=".MainActivity3" />
+        <activity android:name=".MainActivity2" />
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+    </application>
+
+</manifest>
